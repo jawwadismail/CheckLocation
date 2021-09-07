@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+	<h1 id="h1id"> Welcome To My AirTravel </h1><hr>
+	<h1 style="color:green"> hello 1</h1>
+   <h1 style="color:blue"> hello 2</h1> 
+
+	   <TABLE BORDER=2 CELLSPACING=10 CELLPADDING=10 style="background-color:aqua;">
+		   <th colspan="2" align=center><h2> Search Flights </h2></th>
+		   <TR> <TD>Enter source city</TD> 		
+		   <TD>
+				   <select name = "selectedValue1" [(ngModel)]="selectedValue1" (ngModelChange) = "calc1()" >
+						   <option value="BOM">Mumbai</option>
+						   <option value="MAA">Chennai</option>
+						   <option value="DEL">Delhi</option>
+						   <option value="KOL">Kolkata</option>
+				   </select> 
+		   </TD> 
+		   </TR>
+		   <TR> <TD>Enter destination city</TD> 	
+		
+		   <TD>
+		   
+			   <select name = "selectedValue2" [(ngModel)]="selectedValue2" (ngModelChange) = "calc1()">
+						   <option value="KOL">Kolkata</option>
+						   <option value="DEL">Delhi</option>
+						   <option value="MAA">Chennai</option>
+						   <option value="BOM">Mumbai</option>
+			   </select> 
+		   
+		   </TR>
+		   <TR> <TD>Enter date of Journey</TD> 	<TD><input type=date name=doj></TD> </TR>
+	   
+		   <TR> <TD colspan="2" align="center"><input type=submit value="Search Flights" [disabled]= "flag === false"></TD> </TR>
+	   </TABLE>
+
+   {{selectedValue1}}<br>
+   {{selectedValue2}}<br>
+   {{flag}}
+</body>
+</html>
